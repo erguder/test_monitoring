@@ -1,5 +1,6 @@
 import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/core';
 import { navbarData } from './nav-data';
+import { animate, style, transition, trigger } from '@angular/animations';
 
 interface SideBarToggle {
   screenWidth: number;
@@ -9,7 +10,21 @@ interface SideBarToggle {
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.css']
+  styleUrls: ['./sidebar.component.css'],
+  animations: [
+    trigger('fadeInOut', [
+      transition(':enter', [
+        style({opacity: 0}),
+        animate('350ms',
+          style({opacity: 1}))
+      ]),
+      transition(':leave', [
+        style({opacity: 1}),
+        animate('350ms',
+          style({opacity: 0}))
+      ])
+    ]),
+  ]
 })
 export class SidebarComponent implements OnInit{
 

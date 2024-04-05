@@ -1,7 +1,7 @@
 <div class="sidebar" [ngClass]="collapsed ? 'sidebar-collapsed' : ''">
     <div class="logo-container">
         <button class="logo" (click)="toggleCollapse()">PV</button>
-        <div class="logo-text" *ngIf="collapsed">PathoVis</div>    
+        <div class="logo-text" @fadeInOut *ngIf="collapsed">PathoVis</div>    
         <button class="btn-close" *ngIf="collapsed" (click)="closeSidebar()">
             <i class="fal fa-times close-icon"></i>
         </button>    
@@ -13,7 +13,9 @@
                 [routerLinkActiveOptions]="{exact: true}"
             >
                 <i class="sidebar-link-icon" [class]="data.icon"></i>
-                <span class="sidebar-link-text" *ngIf="collapsed">{{ data.label }}</span>
+                <span class="sidebar-link-text" @fadeInOut *ngIf="collapsed">
+                    {{ data.label }}
+                </span>
             </a>
         </li>
     </ul>
