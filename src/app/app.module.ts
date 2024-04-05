@@ -9,6 +9,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ImagesComponent } from './images/images.component';
 import { PatientsComponent } from './patients/patients.component';
 import { ReportsComponent } from './reports/reports.component';
+import { CommunityComponent } from './community/community.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ReportsComponent } from './reports/reports.component';
     ImagesComponent,
     PatientsComponent,
     ReportsComponent,
+    CommunityComponent,
   ],
   imports: [
     BrowserModule,

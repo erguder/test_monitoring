@@ -77,7 +77,7 @@
             text-decoration: none;
             border-radius: 0.625rem;
             transition: color .3s ease;
-
+            
             .sidebar-link-icon{
                 font-size: 22px;
                 width: 2rem;
@@ -85,17 +85,26 @@
                 margin: 0 0.5rem;
                 text-align: center;
             }
-
+            
             .sidebar-link-text{
                 margin-left: 1.5rem;
             }
         }
     }
-
+    
     .sidebar-nav-item:hover{
         .sidebar-nav-link{
             background-color: #fff;
             color: #000;
         }
+    }
+}
+
+.active{
+    background-color: #fff;
+    
+    .sidebar-link-icon,
+    .sidebar-link-text{
+        color: #000;
     }
 }
