@@ -1,1 +1,32 @@
-<p>patients works!</p>
+<div class="container">
+    <h2 class="my-4">All Patients</h2>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>
+              <button class="btn btn-link btn-sort" (click)="sort('name')">Name <i class="fas fa-sort"></i></button>
+            </th>
+            <th>
+              <button class="btn btn-link btn-sort" (click)="sort('dob')">Date of Birth <i class="fas fa-sort"></i></button>
+            </th>
+            <th>
+              <button class="btn btn-link btn-sort" (click)="sort('status')">Status <i class="fas fa-sort"></i></button>
+            </th>
+            <th>
+              <button class="btn btn-link btn-sort" (click)="sort('diagnosis')">Diagnosis <i class="fas fa-sort"></i></button>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let patient of sortedPatients">
+            <td>{{ patient.name }}</td>
+            <td>{{ patient.dob }}</td>
+            <td>{{ patient.status }}</td>
+            <td>{{ patient.diagnosis }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
