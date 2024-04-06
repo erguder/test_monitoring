@@ -1,1 +1,25 @@
-<p>images works!</p>
+<div class="container">
+    <div class="row">
+      <div class="col-md-4" style="max-height: 500px; overflow-y: auto;">
+        <h3>Ready for Examination</h3>
+        <div class="card mb-3 image-card" *ngFor="let image of imageData">
+            <div class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                  <h5 class="card-title">Sample Type: {{ image.sampleType }}</h5>
+                  <p class="card-text">Patient: {{ image.patientName }}</p>
+                  <p class="card-text small">Date Taken: {{ image.dateTaken }}</p>
+                </div>
+                <button class="btn btn-primary" (click)="showImage(image.imageUrl)">View Image</button>
+              </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="image-viewer">
+          <img [src]="selectedImageUrl || 'path/to/default-image.jpg'" alt="Selected Image" class="img-fluid" [hidden]="!selectedImageUrl">
+          <div class="control-panel" *ngIf="selectedImageUrl">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
