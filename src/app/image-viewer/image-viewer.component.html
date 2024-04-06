@@ -1,0 +1,20 @@
+<div class="image-container">
+    <div class="image-wrapper" 
+         [style.transform]="'translate(' + imagePositionX + 'px, ' + imagePositionY + 'px) rotate(' + rotationDegrees + 'deg)'"
+         (mousedown)="startDragging($event)">
+      <img src="{{ imageUrl }}" alt="Image" 
+           [style.transform]="'scale(' + zoomLevel + ')'"
+           [style.cursor]="isDragging ? 'grabbing' : 'grab'"
+           (wheel)="zoomImage($event)"
+           (contextmenu)="rotateImage($event)"
+           (dblclick)="resetImage()">
+    </div>
+  
+    <div class="controls">
+      <button (click)="zoomIn()"><i class="fas fa-search-plus"></i></button>
+      <button (click)="zoomOut()"><i class="fas fa-search-minus"></i></button>
+      <button (click)="rotateClockwise()"><i class="fas fa-redo"></i></button>
+      <button (click)="rotateCounterClockwise()"><i class="fas fa-undo"></i></button>
+    </div>
+  </div>
+  

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { ImagesComponent } from './images/images.component';
 import { PatientsComponent } from './patients/patients.component';
 import { ReportsComponent } from './reports/reports.component';
 import { CommunityComponent } from './community/community.component';
+import { ImageViewerComponent } from './image-viewer/image-viewer.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +24,13 @@ import { CommunityComponent } from './community/community.component';
     PatientsComponent,
     ReportsComponent,
     CommunityComponent,
+    ImageViewerComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

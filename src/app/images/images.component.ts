@@ -16,7 +16,7 @@ export class ImagesComponent {
 
   imageData: ImageData[] = [
     { sampleType: 'Blood', patientName: 'John Doe', dateTaken: '2024-04-01', imageUrl: 'path/to/blood_sample_1.jpg' },
-    { sampleType: 'Urine', patientName: 'Jane Smith', dateTaken: '2024-04-02', imageUrl: 'path/to/urine_sample_1.jpg' },
+    { sampleType: 'Urine', patientName: 'Jane Smith', dateTaken: '2024-04-02', imageUrl: 'assets/histological-staining-kidney.webp' },
     { sampleType: 'MRI', patientName: 'Michael Johnson', dateTaken: '2024-04-03', imageUrl: 'path/to/mri_scan_1.jpg' },
     { sampleType: 'X-ray', patientName: 'Emily Williams', dateTaken: '2024-04-04', imageUrl: 'path/to/xray_image_1.jpg' },
     { sampleType: 'CT Scan', patientName: 'David Brown', dateTaken: '2024-04-05', imageUrl: 'path/to/ct_scan_1.jpg' },
@@ -29,7 +29,7 @@ export class ImagesComponent {
   ];
   
 
-  selectedImageUrl: string | null = null;
+  selectedImageUrl: string = '';
 
   showImage(imageUrl: string) {
     this.selectedImageUrl = imageUrl;
