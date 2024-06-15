@@ -13,6 +13,8 @@ import { PatientsComponent } from './patients/patients.component';
 import { ReportsComponent } from './reports/reports.component';
 import { CommunityComponent } from './community/community.component';
 import { ImageViewerComponent } from './image-viewer/image-viewer.component';
+import { SettingsComponent } from './settings/settings.component';
+import { DisplayComponent } from './display/display.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { ImageViewerComponent } from './image-viewer/image-viewer.component';
     ReportsComponent,
     CommunityComponent,
     ImageViewerComponent,
+    SettingsComponent,
+    DisplayComponent,
   ],
   imports: [
     BrowserModule,

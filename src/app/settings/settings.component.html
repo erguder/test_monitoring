@@ -1,0 +1,33 @@
+<div>
+  <label>
+    Text Input:
+    <input [(ngModel)]="textData" placeholder="Type something here">
+  </label>
+  <label>
+    Text Input2:
+    <input [(ngModel)]="text2Data" placeholder="Type something here">
+  </label>
+</div>
+<div>
+  <label>
+    Radio Buttons:
+    <div>
+      <input type="radio" name="options" value="option1" [(ngModel)]="radioData"> Option 1
+    </div>
+    <div>
+      <input type="radio" name="options" value="option2" [(ngModel)]="radioData"> Option 2
+    </div>
+  </label>
+</div>
+<div>
+  <label>
+    Range Input:
+    <input type="range" [(ngModel)]="rangeData" min="0" max="100">
+    <span>{{ rangeData }}</span>
+  </label>
+</div>
+
+<div>
+  <button (click)="updateData()">Update</button>
+  <button (click)="resetData()">Reset</button>
+</div>
